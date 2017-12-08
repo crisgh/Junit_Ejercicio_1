@@ -33,6 +33,15 @@ public class UnionTest {
         vectorResult.addElement("Gato");
         assertFalse(vectorResult.equals(Union.union(vect1, vect2)));
 	}
-	
+	@Test() 
+	public void RepeatElement()
+	{
+		vect1.add(1);
+        Vector vectorResult = new Vector(3);
+        vectorResult.addElement(1);
+        vectorResult.addElement(2);
+        vectorResult.addElement(3);
+        assertTrue(vectorResult.equals(Union.union(vect1, vect2)));
+}
 
 }

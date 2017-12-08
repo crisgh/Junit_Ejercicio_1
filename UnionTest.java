@@ -28,10 +28,10 @@ public class UnionTest {
         Vector vectorResult = new Vector(5);
         vectorResult.addElement(1);
         vectorResult.addElement(2);
-        vectorResult.addElement("string1");
+        vectorResult.addElement("Perro");
         vectorResult.addElement(3);
-        vectorResult.addElement("string2");
-        assertTrue(vectorResult.equals(Union.union(vect1, vect2)));
+        vectorResult.addElement("Gato");
+        assertFalse(vectorResult.equals(Union.union(vect1, vect2)));
 	}
 	
 

@@ -31,6 +31,17 @@ public class unionSetGenericTest {
 		setResultado.add(2);
 		setResultado.add(3);
         assertTrue(setResultado.equals(Union.unionSetGeneric(vect1, vect2)));
-}
+	}
+	@Test() 
+	public void ElementNull()
+	{
+		vect1.add(null);
+		Set<Integer>  setResultado = new HashSet<>();
+		setResultado.add(1);
+		setResultado.add(2);
+		setResultado.add(3);
+		setResultado.add(null);
+        assertTrue(setResultado.equals(Union.unionSetGeneric(vect1, vect2)));
+	}
 
 }

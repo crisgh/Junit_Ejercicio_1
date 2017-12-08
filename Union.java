@@ -18,6 +18,16 @@ public class Union {
 			throw new NullPointerException();
 		}
 		Vector vectorresult = new Vector();
+		for (int i=0;i<a.size();i++) {
+            if (!vectorresult.contains(a.elementAt(i))) {
+            	vectorresult.addElement(a.elementAt(i));
+            }
+        }
+        for (int i=0;i<b.size();i++) {
+            if (!vectorresult.contains(b.elementAt(i))) {
+            	vectorresult.addElement(b.elementAt(i));
+            }
+        }
 		return vectorresult;
 	}
 }

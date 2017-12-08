@@ -1,7 +1,6 @@
 import static org.junit.Assert.*;
 
 import org.junit.*;
-import java.util.Vector;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -23,4 +22,15 @@ public class UnionSetTest{
 	{
 		Union.unionSet(null, null);
 	}
+	@Test() 
+	public void RepeatElement()
+	{
+		vect1.add(1);
+		Set<Integer> setResult = new HashSet<>();
+		setResult.add(1);
+        setResult.add(2);
+        setResult.add(3);
+        assertTrue(setResult.equals(Union.unionSet(vect1, vect2)));
+	}
 }
+

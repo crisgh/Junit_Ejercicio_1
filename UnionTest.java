@@ -15,4 +15,9 @@ public class UnionTest {
 		vect2.add(2);
 		vect2.add(3);
 	}
+	@Test(expected=NullPointerException.class) 
+	public void TestVectorsareNull()
+	{
+		Union.union(null, null);
+	}
 }

@@ -1,4 +1,5 @@
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 import java.util.Vector;
 
@@ -47,6 +48,20 @@ public class Union {
 		}
 
 		Set<Object> setResult = new HashSet<Object>();
+		for (Iterator i = a.iterator(); i.hasNext(); ) {
+            Object f = i.next();
+            if (!setResult.contains(f)) {
+            	setResult.add(f);
+            }
+        }
+
+        
+        for (Iterator i = b.iterator(); i.hasNext(); ) {
+            Object f = i.next();
+            if (!setResult.contains(f)) {
+            	setResult.add(f);
+            }
+        }
 		return setResult;
 	}
 }

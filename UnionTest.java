@@ -20,4 +20,19 @@ public class UnionTest {
 	{
 		Union.union(null, null);
 	}
+	@Test() 
+	public void ClassDiferent()
+	{
+		vect1.add("string1");
+		vect2.add(("string2"));
+        Vector vectorResult = new Vector(5);
+        vectorResult.addElement(1);
+        vectorResult.addElement(2);
+        vectorResult.addElement("string1");
+        vectorResult.addElement(3);
+        vectorResult.addElement("string2");
+        assertTrue(vectorResult.equals(Union.union(vect1, vect2)));
+	}
+	
+
 }

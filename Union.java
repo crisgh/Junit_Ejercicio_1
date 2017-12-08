@@ -78,6 +78,19 @@ public class Union {
 			throw new NullPointerException();
 		}
 		Set<E> setResultado = new HashSet<E>();
+		for (Iterator<? extends E> i = a.iterator(); i.hasNext(); ) {
+            E f = i.next();
+            if (!setResultado.contains(f)) {
+            	setResultado.add(f);
+            }
+        }
+
+        for (Iterator<? extends E> i = b.iterator(); i.hasNext(); ) {
+            E f = i.next();
+            if (!setResultado.contains(f)) {
+            	setResultado.add(f);
+            }
+}
 		return setResultado;
 	}
 }

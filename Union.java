@@ -64,4 +64,20 @@ public class Union {
         }
 		return setResult;
 	}
+	/**
+	* @return New Set (different from a and b) that contains the
+	* union set of a and b
+	* @param a Set of elements. It can contain the null element. It can’t
+	* contain repeated elements. The heterogeneity is limited.
+	* @param b Set of elements. It can contain the null element. It can’t
+	* contain repeated elements. The heterogeneity is limited.
+	* @throws NullPointerException If a or b is null
+	*/
+	public static <E> Set<E> unionSetGeneric (Set<? extends E> a, Set<? extends E> b){
+		if (a == null || b == null) {
+			throw new NullPointerException();
+		}
+		Set<E> setResultado = new HashSet<E>();
+		return setResultado;
+	}
 }
